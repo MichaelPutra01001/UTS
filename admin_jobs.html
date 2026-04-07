@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - GradMatch</title>
+  <link rel="stylesheet" href="admin_jobs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#" class="brand">GradMatch <span>Admin</span></a>
+  <div class="nav-links">
+    <a href="admin_jobs.html" class="active">Kelola Lowongan</a>
+    <a href="Logout.php">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h2>Daftar Lowongan</h2>
+    <button onclick="showForm()" class="btn-primary">+ Tambah Lowongan</button>
+  </div>
+
+  <!-- Form Tambah / Edit -->
+  <div id="formBox" class="form-box" style="display:none;">
+    <h3 id="formTitle">Tambah Lowongan</h3>
+    <input type="hidden" id="jobId">
+
+    <div class="form-group">
+      <label>Posisi</label>
+      <input type="text" id="posisi" placeholder="cth. Frontend Developer">
+    </div>
+    <div class="form-group">
+      <label>Perusahaan</label>
+      <input type="text" id="perusahaan" placeholder="cth. PT Digital Nusantara">
+    </div>
+    <div class="form-group">
+      <label>Lokasi</label>
+      <input type="text" id="lokasi" placeholder="cth. Jakarta">
+    </div>
+    <div class="form-group">
+      <label>Tipe</label>
+      <select id="tipe">
+        <option>Full Time</option>
+        <option>Part Time</option>
+        <option>Remote</option>
+        <option>Hybrid</option>
+        <option>Contract</option>
+        <option>Partnership</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button onclick="simpanJob()" class="btn-primary">Simpan</button>
+      <button onclick="tutupForm()" class="btn-secondary">Batal</button>
+    </div>
+    <p id="pesanError" style="color:red; display:none;"></p>
+  </div>
+
+  <!-- Tabel Lowongan -->
+  <table class="job-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Posisi</th>
+        <th>Perusahaan</th>
+        <th>Lokasi</th>
+        <th>Tipe</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="tabelBody">
+      <tr><td colspan="6" style="text-align:center;">Memuat data...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer><p>© 2026 GradMatch</p></footer>
+<script src="admin_jobs.js"></script>
+</body>
+</html>

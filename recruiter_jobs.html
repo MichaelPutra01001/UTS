@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter - GradMatch</title>
+  <link rel="stylesheet" href="recruiter_jobs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#" class="brand">GradMatch <span>Recruiter</span></a>
+  <div class="nav-links">
+    <a href="#" onclick="gantiTab('lowongan')" id="tab-lowongan" class="active">Lowongan Saya</a>
+    <a href="#" onclick="gantiTab('pelamar')" id="tab-pelamar">Pelamar Masuk</a>
+    <a href="Logout.php">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ===== TAB LOWONGAN ===== -->
+  <div id="halamanLowongan">
+    <div class="page-header">
+      <h2>Lowongan Saya</h2>
+      <button onclick="showForm()" class="btn-primary">+ Posting Lowongan</button>
+    </div>
+
+    <!-- Form Tambah / Edit -->
+    <div id="formBox" class="form-box" style="display:none;">
+      <h3 id="formTitle">Tambah Lowongan</h3>
+      <input type="hidden" id="jobId">
+
+      <div class="form-group">
+        <label>Posisi</label>
+        <input type="text" id="posisi" placeholder="cth. Backend Developer">
+      </div>
+      <div class="form-group">
+        <label>Perusahaan</label>
+        <input type="text" id="perusahaan" placeholder="cth. PT Maju Bersama">
+      </div>
+      <div class="form-group">
+        <label>Lokasi</label>
+        <input type="text" id="lokasi" placeholder="cth. Surabaya">
+      </div>
+      <div class="form-group">
+        <label>Tipe</label>
+        <select id="tipe">
+          <option>Full Time</option>
+          <option>Part Time</option>
+          <option>Remote</option>
+          <option>Hybrid</option>
+          <option>Contract</option>
+          <option>Partnership</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button onclick="simpanJob()" class="btn-primary">Simpan</button>
+        <button onclick="tutupForm()" class="btn-secondary">Batal</button>
+      </div>
+      <p id="pesanError" style="color:red; display:none;"></p>
+    </div>
+
+    <!-- Tabel Lowongan -->
+    <table class="job-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Posisi</th>
+          <th>Perusahaan</th>
+          <th>Lokasi</th>
+          <th>Tipe</th>
+          <th>Pelamar</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tabelBody">
+        <tr><td colspan="7" style="text-align:center;">Memuat data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== TAB PELAMAR ===== -->
+  <div id="halamanPelamar" style="display:none;">
+    <div class="page-header">
+      <h2>Pelamar Masuk</h2>
+    </div>
+
+    <table class="job-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Pelamar</th>
+          <th>Email</th>
+          <th>Posisi</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tabelPelamar">
+        <tr><td colspan="6" style="text-align:center;">Memuat data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer><p>© 2026 GradMatch</p></footer>
+<script src="recruiter_jobs.js"></script>
+</body>
+</html>
