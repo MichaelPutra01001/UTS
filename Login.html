@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GradMatch</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar">
+    <h1>GradMatch</h1>
+    <p>Platform Job Matching Berbasis Kompetensi</p>
+</div>
+
+<section class="login-container">
+    <div class="login-card">
+        <h2>Masuk ke Akun</h2>
+        <p class="sub">Selamat datang kembali</p>
+        <form action="login.php" method="POST">
+            <input type="text" name="username" id="username" placeholder="Email atau Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <p class="error-msg" id="errorMsg"></p>
+            <button type="submit">Masuk</button>
+        </form>
+        <p class="register">Belum punya akun? <a href="Regis.html">Daftar</a></p>
+    </div>
+</section>
+
+<footer><p>© 2026 GradMatch</p></footer>
+
+<script src="login.js"></script>
+
+</body>
+</html>

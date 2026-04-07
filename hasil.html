@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Skill Matching - GradMatch</title>
+    <link rel="stylesheet" href="hasil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="home.html" class="brand">GradMatch</a>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="profil.html">Profil</a>
+        <a href="jobs.html">List Job</a>
+        <a href="matching.html" class="active">Skill Matching</a>
+        <a href="login.html">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Hasil Analisis CV Kamu</h1>
+    <p class="subtitle">Berdasarkan data CV yang kamu unggah</p>
+
+    <div class="card highlight reveal">
+        <h2>Ringkasan Kecocokan</h2>
+        <div class="score" id="scoreNum">0%</div>
+        <p>Kamu memiliki kecocokan tinggi dengan bidang <strong>Web Development</strong>.</p>
+    </div>
+
+    <div class="card reveal">
+        <h2>Analisis Skill</h2>
+        <div class="skill"><span>HTML & CSS</span><div class="bar"><div class="fill" data-width="95"></div></div></div>
+        <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill" data-width="75"></div></div></div>
+        <div class="skill"><span>UI/UX Design</span><div class="bar"><div class="fill" data-width="70"></div></div></div>
+        <div class="skill"><span>Backend Development</span><div class="bar"><div class="fill" data-width="55"></div></div></div>
+    </div>
+
+    <div class="grid-2 reveal">
+        <div class="card">
+            <h2>Kelebihan</h2>
+            <ul>
+                <li>Struktur HTML rapi & terstruktur</li>
+                <li>Memahami responsive design</li>
+                <li>Portofolio frontend cukup kuat</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Perlu Ditingkatkan</h2>
+            <ul>
+                <li>Pengalaman backend masih terbatas</li>
+                <li>Belum familiar dengan framework modern</li>
+                <li>Kurang pengalaman kerja tim (Git workflow)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card reveal">
+        <h2>Rekomendasi Pekerjaan</h2>
+        <div class="job-card"><div><h3>Frontend Developer</h3><p>PT Digital Nusantara</p></div><span class="badge">Match 90%</span></div>
+        <div class="job-card"><div><h3>UI Designer</h3><p>Creative Studio ID</p></div><span class="badge">Match 85%</span></div>
+        <div class="job-card"><div><h3>Junior Web Developer</h3><p>Startup Teknologi Maju</p></div><span class="badge">Match 80%</span></div>
+    </div>
+
+    <div style="text-align:center; margin-top:16px">
+        <a href="matching.html" class="btn-back">← Analisis Ulang</a>
+    </div>
+</div>
+
+<footer><p>© 2026 GradMatch</p></footer>
+
+<script src="hasil.js"></script>
+</body>
+</html>
